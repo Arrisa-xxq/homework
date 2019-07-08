@@ -1,0 +1,169 @@
+.header span{
+    display: inline-block;
+    font:700 20px/24px "";
+    color: #fff;
+    line-height: 30px;
+    margin: 40px 0;
+}
+.bg{
+    width: 100%;
+    height:640px;
+    background: url(../../img/loginbg.jpg) no-repeat center top;
+    /* background-size: 100% 100%;
+    background-position: 0 0; */
+}
+#form{
+    float: right;    
+    width: 400px;
+    height: 431px;
+    /* border: 1px solid #ccc; */
+    margin: 100px 100px 0 0;
+    box-shadow: 1px 2px 1px 1px #ccc;
+    background: #fff;
+    border-radius: 3px;
+
+}
+#form .choice{
+    height: 60px;
+    font:700 20px/30px "";
+    line-height: 60px;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    width: 400px;
+    display: flex;
+}
+#form  .active{
+    background: #ca0e25;
+    color: #fff;
+    width: 200px;
+}
+#form  .choice div{
+    width: 200px;
+    flex: 1;
+}
+/* #form.form1 .choice .login{
+    width: 200px;
+    flex: 1;
+} */
+#form .re-cont{
+    position: relative;
+    display: none;
+}
+#form .lo-cont{
+    position: relative;
+}
+#form  img{
+    margin: 13px 0 0 14px;
+    float: left;
+}
+#form .ipt{
+    border: none;
+    height: 46px;
+    width: 270px;
+    outline: none;
+    padding:0 5px;
+}
+#form .cont{
+    width: 318px;
+    height: 48px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font: 18px/20px "";
+}
+#form  .phone{
+    top: 28px;
+}
+#form  .mima{
+    top: 88px;
+}
+#form .mima2{
+    top: 148px;
+}
+#form  .check{
+    top: 208px;
+    border: none;
+    width: 318px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+#form .check .code1{
+    float: left;
+    width: 168px;
+    height: 50px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+#form  .check a{
+    display: inline-block;
+    width: 135px;
+    height: 50px;
+    background: #ca0e25;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font: 16px/50px "";
+    float: right;
+}
+#form .btn{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    top: 273px;
+    display: block;
+    width: 320px;
+    height: 52px;
+    background: #f67a0c;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font: 18px/52px "";
+    color: #fff;
+    line-height: 52px;
+    border-radius: 5px;
+}
+#form .lo-cont .check{
+    top: 148px;
+}
+#form .lo-cont .check span{
+    display: inline-block;
+    width: 105px;
+    height: 26px;
+    background: #ccc;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font: 16px/20px "";
+    margin: 12px 0 0 30px;
+    cursor: pointer;
+}
+#form .lo-cont .forget{
+    width: 320px;
+    height: 52px;
+    line-height: 52px;
+    font: 14px/70px "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 200px;
+}
+#form .lo-cont .forget input{
+    float: left;
+    margin: 30px 0;
+}
+#form .lo-cont .forget a{
+    float: right;
+}
+#form .lo-cont .forget a:hover{
+    text-decoration-line: underline;
+    color: #ca0e25;
+}

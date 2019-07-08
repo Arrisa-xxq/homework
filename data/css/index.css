@@ -1,0 +1,310 @@
+/* 顶部 */
+.topper{
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #727272;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #e2e2e2;
+}
+.hl{
+    float: left;
+}
+.topul{
+    float: right;
+}
+.topul li{
+    float: left;
+    position: relative;
+    padding:0 9px 0 10px;
+
+}
+.topul li a:hover{color: #f25;cursor: pointer;}
+.topul li:nth-child(1)::before{border: none;}
+.topul li:nth-child(2)::before{border: none;}
+.topul li::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    margin-top:-6px;
+    height: 12px;
+    border: 1px solid #727272;
+    opacity: .5;
+}
+.code .imgbox{
+    position: absolute;
+    z-index: 2;
+    top:100%;
+    right:0;
+    display: none;
+    margin-top:-1px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.code:hover{background: #fff;}
+.code:hover .imgbox{display: block;}
+.code .imgbox img{
+    vertical-align: middle;
+    width: 136px;
+    height: 136px;
+}
+
+/* 头部 */
+.header{height: 120px;}
+.header .logo{
+    float: left;
+    margin-top: 26px;
+}
+.cityinfo{
+    float: left;
+    width: 280px;
+    margin: 40px 10px 0;
+}
+.city{
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 16px;
+}
+/* .slogan{} */
+.searchBox{
+    float: left;
+    width: 430px;
+    position: absolute;
+    top: 70px;
+    left:520px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    overflow: hidden;
+
+}
+.searchBox .headTxt{
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    width: 380px;
+}
+/* .searchBox .headTxt:active{
+} */
+.searchBox .headBtn{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    background: #727272;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+.phone1{float: right;height: 120px;position: relative;z-index: -2;}
+
+/* 导航 */
+.nav{
+    height: 50px;
+    background: #ca0e25;
+    box-sizing: border-box;
+    position: relative;
+}
+.nav .allNav{
+   width: 1000px;
+    float: right;
+    text-align: center;
+}
+.nav .allNav ul li{
+    float: left;
+    
+}
+.nav .allNav ul li a{
+    color: #fff;
+    line-height: 50px;
+    font: 16px/50px "";
+    width: 125px;
+    display: block;
+}
+.nav .allNav ul li a:hover{
+    background: #900;
+}
+.products{
+    width: 190px;
+    float: left;
+    position: relative;
+    
+}
+.products .hd{
+    width: 190px;
+    height: 50px;
+    line-height: 50px;
+    font: 18px/50px "";
+    font-family: "微软雅黑";
+    color: #fff;
+    background: #900;
+}
+.products .bd{
+    padding-bottom: 10px;
+    display: none;
+    background: #fff;
+    position: absolute;
+    z-index: 8;
+}
+.products:hover .bd{
+    display: block;
+}
+.products .bd .item{
+    border: 1px solid #ccc;
+    position: relative;
+    border-bottom: none;
+}
+.products .bd .item .title{
+    width: 190px;
+    text-indent:32px;
+    overflow:hidden;
+    line-height:30px;
+    font-size:14px;
+    font-weight:bold;
+    color:#292929;
+}
+.products .bd .item .title a{
+    color: #900;
+    position: relative;
+}
+.products .bd .item .title a i{
+    position: absolute;
+    background: url(../../img/flologo.png) no-repeat;
+}
+.products .bd .item .one a i{
+    width:27px;
+    height:27px;
+    background-position:0 0;
+    left:-27px;
+    top:-5px;
+}
+.products .bd .item .two a i{
+    width:27px;
+    height:27px;
+    background-position:0 -27px;
+    left:-28px;
+    top:-7px;
+}
+.products .bd .item .three a i{
+    width:27px;
+    height:27px;
+    background-position:0 -54px;
+    left:-28px;
+    top:-7px;
+}
+.products .bd .item .four a i{
+    width:27px;
+    height:27px;
+    background-position:0 -81px;
+    left:-28px;
+    top:-7px;
+}
+.products .bd .item .five a i{
+    width:27px;
+    height:27px;
+    background-position:0 -108px;
+    left:-28px;
+    top:-7px;
+}
+.products .bd .item .list{
+    width: 190px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+.products .bd .item .list a{
+    font: 12px/22px "微软雅黑";
+    color: #000;
+    padding: 3px;
+}
+.products .bd .item .list a:hover{
+    color: #ca0e25;
+}
+.products .bd .item .arrow{
+    font-family: "微软雅黑";
+    color:#000;
+    position:absolute;
+    right:10px;
+    top:5px;
+    font: 600 16px/20px "";
+}
+.products .bd .item .line{
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 2px;
+    height: 120px;
+    background: #fff;
+    z-index: 95;
+}
+.products .bd .item .subitem{
+    display: none;
+}
+.products .bd .layer .line{
+    display: block;
+}
+.products .bd .layer .subitem{
+    width: 700px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    font-family: "微软雅黑";
+    position: absolute;
+    left: 190px;
+    z-index: 95;
+    padding: 5px 10px 15px 10px;
+    display: block;
+    top: 0;
+}
+.products .bd .layer .subitem .inner .tit{
+    font-size:12px; 
+    text-align:left; 
+    border-top:1px dashed #d7d7d7;
+    padding:5px 0;
+}
+.products .bd .layer .subitem .inner .tit1{
+    border-top:none;
+}
+.products .bd .layer .subitem .inner .tit .name{
+    display: block;
+    width: 90px;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    padding-top: 3px;
+}
+.products .bd .layer .subitem .inner ul{
+    overflow: hidden;
+    zoom: 1;
+    display: block;
+    margin-top: 30px;
+    width: 630px;
+}
+.products .bd .layer .subitem .inner ul li{
+    float: left;
+    padding: 0 8px;
+    height: 25px;
+}
+.products .bd .layer .subitem .inner ul li a{
+    color:#222;
+    display:block;
+}
+.products .bd .layer .subitem .inner ul li a:hover{
+    color: #ca0e25;
+}
+
+/* 尾部 */
+
+#footer{height: 138px;background: #363636;
+    font: 12px/30px "";color: #6e6e6e;text-align: center;}
+    #footer .footer-t{padding-top: 21px;}
+    #footer .footer-t a{color: #6e6e6e;}
+    #footer .footer-t span{margin: 0 5px;}
