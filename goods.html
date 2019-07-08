@@ -264,7 +264,8 @@
         <!-- 产品列表 -->
         <div class="goods">
             <div class="wrapper">
-                 <div class="info">
+                <p>产品还未开放，敬请期待。。。。。。。</p>
+                 <!-- <div class="info">
                     <div class="info-t">
                         <a href="#"><img src="img/newarrive1.jpg" alt=""></a>
                     </div>
@@ -275,7 +276,7 @@
                         <span>￥<b>521.00</b></span>
                         <a href="#">点击购买</a>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -297,15 +298,37 @@
     </div>
 </body>
 <script src="libs/jquery.js"></script>
+<script src="libs/ajax-3.1.js"></script>
 <script src="js/jquery-banner.js"></script>
-<script src="js/menu.js"></script>
+<!-- <script src="js/menu.js"></script> -->
 <script src="js/data.js"></script>
 <script>
-    var str = "";
-    for(var i=0;i<arr.length;i++){
-        str += '<div class="info"><div class="info-t"><a href="#"><img src="'+arr[i].src+'" alt=""></a></div><div class="info-m"><a href="#">'+arr[i].name+'</a></div><div class="info-b"><span>￥<b>'+arr[i].price+'</b></span><a href="#">点击购买</a></div></div>';
+    // var str = "";
+    // for(var i=0;i<arr.length;i++){
+    //     str += '<div class="info"><div class="info-t"><a href="#"><img src="'+arr[i].src+'" alt=""></a></div><div class="info-m"><a href="#">'+arr[i].name+'</a></div><div class="info-b"><span>￥<b>'+arr[i].price+'</b></span><a href="#">点击购买</a></div></div>';
+    // }
+    // var goods = document.querySelector(".goods");
+    // goods.innerHTML = str;
+    class Goods{
+        constructor(options){
+            this.url = options.url;
+            this.goods = options.goods;
+            this.init();
+        }
+        init(){
+            var that = this;
+            $.ajax({
+                url:this.url,
+                success:function(res){
+                    that.display(res);
+                    console.log(res);
+                }
+            })
+        }
     }
-    var goods = document.querySelector(".goods");
-    goods.innerHTML = str;
+    new Goods({
+        goods:$(".goods"),
+        url:"data/json/data.json"
+    });
 </script>
 </html>
