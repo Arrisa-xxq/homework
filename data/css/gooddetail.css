@@ -1,3 +1,17 @@
+.back{}
+.back a{
+    display: block;
+    font: 16px/30px "";
+    color: #000;
+    border: 1px solid #ccc;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+}
+.back a:hover{
+    color: #ca0e25;
+    text-decoration-line: underline;
+}
 .details{
     width: 1200px;
     position: relative;
@@ -5,7 +19,7 @@
     right: 0;
     margin: 20px auto;
     /* top: 20px; */
-    border: 1px solid #ccc;
+    
     min-height: 600px;
 }
 .details .top{
@@ -13,18 +27,47 @@
     justify-content: space-around;
     flex-wrap: nowrap;
     flex-direction: row; */
-    
+    /* height: 600px; */
+    overflow: hidden;
+    border: 1px solid #ccc;
 }
 .details .imgbox{
     /* border-right: 1px solid #ccc; */
     width: 470px;
     height: 500px;
-    padding: 10px;
     float: left;
+    cursor: pointer;
+    position: relative;
+}
+.details .imgbox a{
+    display: block;
+}
+.details .imgbox span{
+    background: rgba(ccc, ccc, ccc, .4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
 }
 .details .imgbox img{
-    width: 450px;
+    width: 470px;
+    height: 500px;
     display: block;
+    top: 1px;
+}
+.details .simgbox{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 600px;
+    z-index: 1;
+    overflow: hidden;
+    display: none;
+} 
+.details .simgbox img{
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .details .contbox{
     float: left;
@@ -164,11 +207,110 @@
 .details .contbox .consult .right a span{
     display: block;
 }
-.details .top .huamade {
+.details  .huamade {
     width: 1200px;
     height: 100px;
 }
-.details .top .huamade img{
+.details .huamade img{
     width: 1200px;
     height: 100px;
+    display: block;
+    border: 1px solid #ca0e25;
 }
+.details .shuoming img{
+    display: block;
+    margin-top: 20px;
+}
+.desc-wrap {
+    padding: 0 280px 60px 0;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.desc-main {
+    float: left;
+    width: 100%;
+    border: 1px solid #d7d7d7;
+}
+.desc-tabs {
+    height: 59px;
+    line-height: 59px;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #d7d7d7;
+}
+.desc-tabs .tab-nav {
+    float: left;
+}
+.desc-tabs .tool {
+    float: right;
+}
+.desc-cnt {
+    padding: 30px;
+}
+.desc-typo {
+    font-size: 14px;
+    color: #777;
+    line-height: 30px;
+}
+.desc-aside {
+    margin-right: -280px;
+    float: right;
+    width: 240px;
+}
+.desc-aside .panel-hd {
+    padding-left: 1px;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: #4f3f3f;
+}
+.aside-rec li {
+    margin-bottom: 10px;
+    border: 1px solid #d7d7d7;
+}
+.aside-rec .figure {
+    display: block;
+}
+.aside-rec .figure img {
+    width: 100%;
+}
+.aside-rec .cnt {
+    height: 100px;
+    overflow: hidden;
+    padding: 0 12px;
+    background-color: #fcfcfc;
+    border-top: 1px solid #d7d7d7;
+}
+.aside-rec .name {
+    margin: 23px 0 12px;
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+}
+.aside-rec .price {
+    line-height: 1;
+    font-size: 16px;
+    color: #ca0e25;
+}
+.aside-rec .price .num {
+    font-size: 24px;
+}
+.weixin-code {
+    height: 240px;
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    font-size: 0;
+}
+.weixin-code img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+}
+
+
+

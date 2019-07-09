@@ -263,7 +263,7 @@
         </div>
         <!-- 产品列表 -->
         <div class="goods">
-            <div class="wrapper">
+
                 <p>产品还未开放，敬请期待。。。。。。。</p>
                  <!-- <div class="info">
                     <div class="info-t">
@@ -274,11 +274,13 @@
                     </div>
                     <div class="info-b">
                         <span>￥<b>521.00</b></span>
-                        <a href="#">点击购买</a>
+                        <a href="http://localhost/1905/flower/gooddetail.html">点击购买</a>
                     </div>
                 </div> -->
 
-            </div>
+        </div>
+        <!-- 分页 -->
+        <div id="Pagination" class="pagination">
         </div>
         <!-- 尾部 -->
     <div id="footer">
@@ -300,35 +302,7 @@
 <script src="libs/jquery.js"></script>
 <script src="libs/ajax-3.1.js"></script>
 <script src="js/jquery-banner.js"></script>
-<!-- <script src="js/menu.js"></script> -->
-<script src="js/data.js"></script>
-<script>
-    // var str = "";
-    // for(var i=0;i<arr.length;i++){
-    //     str += '<div class="info"><div class="info-t"><a href="#"><img src="'+arr[i].src+'" alt=""></a></div><div class="info-m"><a href="#">'+arr[i].name+'</a></div><div class="info-b"><span>￥<b>'+arr[i].price+'</b></span><a href="#">点击购买</a></div></div>';
-    // }
-    // var goods = document.querySelector(".goods");
-    // goods.innerHTML = str;
-    class Goods{
-        constructor(options){
-            this.url = options.url;
-            this.goods = options.goods;
-            this.init();
-        }
-        init(){
-            var that = this;
-            $.ajax({
-                url:this.url,
-                success:function(res){
-                    that.display(res);
-                    console.log(res);
-                }
-            })
-        }
-    }
-    new Goods({
-        goods:$(".goods"),
-        url:"data/json/data.json"
-    });
-</script>
+<script src="libs/jquery.pagination.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/goods.js"></script>
 </html>

@@ -7,14 +7,10 @@
     position: relative;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    margin: 20px auto;
+ 
 }
-.goods .wrapper{
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; */
-    /* float: left; */
-}
+
 .goods .info{
     width: 300px;
     height: 410px;
@@ -25,12 +21,12 @@
     border-color: #ca0e25;
 }
 .goods .info-t{
-    height: 310px;
+    /* height: 310px; */
     margin: 10px 0;
 }
 .goods .info-m{
     margin-bottom: 3px;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 24px;
     line-height: 24px;
     font-size: 14px;
@@ -60,5 +56,42 @@
     text-align: center;
     line-height: 30px;
     border-radius: 3px;
-    float: right;
+    /* float: right; */
+}
+/* 分页 */
+.pagination{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.pagination a {
+    text-decoration: none;
+	border: 1px solid #AAE;
+	color: #15B;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.pagination .current {
+    background: #fff;
+    color: #26B;
+    border: 1px solid #AAE;
+    width: 34px;
+    line-height: 34px;
+    font: 16px/34px "";
+    text-align: center;
+}
+
+.pagination .current.prev, .pagination .next{
+	color:#999;
+	border-color:#999;
+    background:#fff;
+    width: 86px;
+    height: 34px;
 }
