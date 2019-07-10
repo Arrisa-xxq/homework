@@ -1,64 +1,64 @@
-class Mirro{
-    constructor(){
-        this.sbox = document.querySelector(".details .imgbox");
-        this.bbox = document.querySelector(".details .simgbox");
-        this.bimg = document.querySelector(".details .simgbox img");
-        this.movesp = document.querySelector(".details .imgbox span");                
-        // this.init();
-        this.addEvent();
-    };
-    init(){
-        this.movesp.style.width = this.bbox.offsetWidth / this.bimg.offsetWidth * this.sbox.offsetWidth + "px";
-        this.movesp.style.height = this.bbox.offsetHeight / this.bimg.offsetHeight * this.sbox.offsetHeight + "px";
-    };
-    addEvent(){
-        var that = this;
-        this.sbox.addEventListener("mouseover",function(){
-            that.over();
-            that.init();
-        });
-        this.sbox.addEventListener("mouseout",function(){
-            that.out();
-        });
-        this.sbox.addEventListener("mousemove",function(eve){
-            var e = eve || window.event;
-            that.move(e);
-        });
-    };
-    over(){
-        this.movesp.style.display = "block";
-        this.bbox.style.display = "block";
-    };
-    out(){
+// class Mirro{
+//     constructor(){
+//         this.sbox = document.querySelector(".details .imgbox");
+//         this.bbox = document.querySelector(".details .simgbox");
+//         this.bimg = document.querySelector(".details .simgbox img");
+//         this.movesp = document.querySelector(".details .imgbox span");                
+//         // this.init();
+//         this.addEvent();
+//     };
+//     init(){
+//         this.movesp.style.width = this.bbox.offsetWidth / this.bimg.offsetWidth * this.sbox.offsetWidth + "px";
+//         this.movesp.style.height = this.bbox.offsetHeight / this.bimg.offsetHeight * this.sbox.offsetHeight + "px";
+//     };
+//     addEvent(){
+//         var that = this;
+//         this.sbox.addEventListener("mouseover",function(){
+//             that.over();
+//             that.init();
+//         });
+//         this.sbox.addEventListener("mouseout",function(){
+//             that.out();
+//         });
+//         this.sbox.addEventListener("mousemove",function(eve){
+//             var e = eve || window.event;
+//             that.move(e);
+//         });
+//     };
+//     over(){
+//         this.movesp.style.display = "block";
+//         this.bbox.style.display = "block";
+//     };
+//     out(){
         
-        this.movesp.style.display = "none";
-        this.bbox.style.display = "none";
-    };
-    move(e){
-        var l =  e.clientX - this.sbox.offsetLeft - this.movesp.offsetWidth;
-        var t =  e.clientY - this.sbox.offsetTop - this.movesp.offsetHeight/2;
+//         this.movesp.style.display = "none";
+//         this.bbox.style.display = "none";
+//     };
+//     move(e){
+//         var l =  e.clientX - this.sbox.offsetLeft - this.movesp.offsetWidth;
+//         var t =  e.clientY - this.sbox.offsetTop - this.movesp.offsetHeight/2;
 
-        if(l<0){
-            l = 0;
-        }else if(l > this.sbox.offsetWidth - this.movesp.offsetWidth){
-            l = this.sbox.offsetWidth - this.movesp.offsetWidth;
-        }
-        if(t<0){
-            t = 0;
-        }else if(t > this.sbox.offsetHeight - this.movesp.offsetHeight){
-            t = this.sbox.offsetHeight - this.movesp.offsetHeight;
-        }
-        this.movesp.style.left = l + "px";
-        this.movesp.style.top = t + "px";
+//         if(l<0){
+//             l = 0;
+//         }else if(l > this.sbox.offsetWidth - this.movesp.offsetWidth){
+//             l = this.sbox.offsetWidth - this.movesp.offsetWidth;
+//         }
+//         if(t<0){
+//             t = 0;
+//         }else if(t > this.sbox.offsetHeight - this.movesp.offsetHeight){
+//             t = this.sbox.offsetHeight - this.movesp.offsetHeight;
+//         }
+//         this.movesp.style.left = l + "px";
+//         this.movesp.style.top = t + "px";
 
-        var x = l / (this.sbox.offsetWidth - this.movesp.offsetWidth);
-        var y = t / (this.sbox.offsetHeight - this.movesp.offsetHeight);
-        this.bimg.style.left = -x * (this.bimg.offsetWidth - this.bbox.offsetWidth) + "px";
-        this.bimg.style.top = -y * (this.bimg.offsetHeight - this.bbox.offsetHeight) + "px";
-        console.log(this.bimg.style.left,this.bimg.style.top);
+//         var x = l / (this.sbox.offsetWidth - this.movesp.offsetWidth);
+//         var y = t / (this.sbox.offsetHeight - this.movesp.offsetHeight);
+//         this.bimg.style.left = -x * (this.bimg.offsetWidth - this.bbox.offsetWidth) + "px";
+//         this.bimg.style.top = -y * (this.bimg.offsetHeight - this.bbox.offsetHeight) + "px";
+//         // console.log(this.bimg.style.left,this.bimg.style.top);
 
-        }
-    }
+//         }
+//     }
     // onload = function(){
     //     new Mirro();
     // }
@@ -68,7 +68,7 @@ class goodDetail{
         this.url = options.url;
         this.top = options.top;
         this.init();
-        // this.addEvent();
+        
     }
     init(){
         var that = this;
@@ -79,15 +79,65 @@ class goodDetail{
                 // console.log(res);
                 that.res = JSON.parse(res);
                 // console.log(that.res);
+                
                 that.getData();
-                new Mirro();
+                // new Mirro();
             }
         })
     }
     getData(){
         this.infos = localStorage.getItem("infos") ? JSON.parse(localStorage.getItem("infos")) : [];
-        console.log(this.infos);
+        // console.log(this.infos);
         this.display();
+        this.addEvent();
+    }
+    addEvent(){
+        var that = this;
+        this.top.onchange = function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "buynum"){
+                // console.log(that.infos);
+                // console.log(buynum.value);
+                that.value = parseInt(target.value);
+                // console.log(that.value);
+            }
+        }
+        this.top.onclick = function(eve){
+            var e = eve || window.event;
+            var target = e.target || e.srcElement;
+            if(target.className == "addcar"){
+               
+                this.buyinfo = localStorage.getItem("buyinfo");
+                if(this.buyinfo){
+                    var onoff = true;
+                    this.buyinfo = JSON.parse(this.buyinfo); 
+                    console.log(that.infos);
+                    // console.log(that.value);
+                    for(var i=0;i<this.buyinfo.length;i++){
+                        if(this.buyinfo[i].id == that.infos){
+                            // this.buyinfo[i].num ++;
+                            // onoff = false;
+                            // console.log(this.goods[i].id);
+                            this.buyinfo[i].buynum = this.buyinfo[i].buynum + that.value;
+                            onoff = false;
+                        }
+                    }
+                    if(onoff){
+                        this.buyinfo.push({
+                            id:that.infos,
+                            buynum:that.value
+                        })
+                    }
+                }else{
+                    this.buyinfo = [{
+                        id:that.infos,
+                        buynum:that.value
+                    }]
+                }
+                localStorage.setItem("buyinfo",JSON.stringify(this.buyinfo));
+            }
+        }
     }
     display(){
         var str = "";
@@ -151,8 +201,11 @@ class goodDetail{
                         <dd class="v">${this.res[i].tips}</dd>
                     </dl>
                     <div class="inps">
+                        <div class="count">
+                            <input type="number" class="buynum" min="0" value="0">
+                        </div>
+                        <a class="addcar" href="http://localhost/1905/flower/shopcar1.html">加入购物车</a>
                         <a class="buy">立即购买</a>
-                        <a class="addcar">加入购物车</a>
                     </div>
                     <div class="consult">
                         <div class="left">

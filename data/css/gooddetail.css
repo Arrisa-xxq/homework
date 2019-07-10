@@ -148,6 +148,11 @@
 }
 .details .contbox .inps{
     height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 .details .contbox .inps a{
     float: left;
@@ -164,15 +169,37 @@
     vertical-align: middle;
     padding: 0 24px;
     margin-top: 20px;
+    margin-left: 20px;
     text-align: center;
     cursor: pointer;
 }
 .details .contbox .inps .addcar{
     background:#ca0e25; 
 }
-.details .contbox .consult{
-
+.details .contbox .count{
+    /* position: absolute; */
+    /* left: 405px;
+    top: 15px; */
+    margin-top: 20px;
 }
+/* .details .contbox .jian,.jia{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font:600 35px/40px "";
+    cursor: pointer;
+} */
+.details .contbox .buynum{
+    border: 1px solid #000;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    font:500 20px/30px "";
+    text-align: center;
+}
+/* .details .contbox .consult{
+
+} */
 .details .contbox .consult .left{
     float: left;
     height: 80px;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="data/css/index.css">
     <link rel="stylesheet" href="data/css/head-footer.css">
     <link rel="stylesheet" href="data/css/login.css">
+    <link rel="stylesheet" href="data/css/shopcar.css">
 </head>
 <body>
     <!-- 顶部 -->
@@ -33,6 +34,61 @@
         <div class="shopcar">
             <p>您还没有选购任何商品哦！<a href="http://localhost/1905/flower/goods.html">点击这里去看看吧！</a></p>
         </div>
+        <div class="like">
+            <div class="like-top">
+                <img src="../flower/img/like.png" alt="">
+            </div>
+            <div class="like-bottom">
+                <!-- <div class="info">
+                    <div class="info-t">
+                        <a href="#"><img src="img/newarrive1.jpg" alt=""></a>
+                    </div>
+                    <div class="info-m">
+                        <a href="#">真爱永恒-99支红玫瑰</a>
+                    </div>
+                    <div class="info-b">
+                        <span>￥<b>521.00</b></span>
+                        <a href="http://localhost/1905/flower/gooddetail.html">点击购买</a>
+                    </div>
+                </div>
+                <div class="info">
+                        <div class="info-t">
+                            <a href="#"><img src="img/newarrive1.jpg" alt=""></a>
+                        </div>
+                        <div class="info-m">
+                            <a href="#">真爱永恒-99支红玫瑰</a>
+                        </div>
+                        <div class="info-b">
+                            <span>￥<b>521.00</b></span>
+                            <a href="http://localhost/1905/flower/gooddetail.html">点击购买</a>
+                        </div>
+                    </div>
+                    <div class="info">
+                            <div class="info-t">
+                                <a href="#"><img src="img/newarrive1.jpg" alt=""></a>
+                            </div>
+                            <div class="info-m">
+                                <a href="#">真爱永恒-99支红玫瑰</a>
+                            </div>
+                            <div class="info-b">
+                                <span>￥<b>521.00</b></span>
+                                <a href="http://localhost/1905/flower/gooddetail.html">点击购买</a>
+                            </div>
+                        </div>
+                        <div class="info">
+                                <div class="info-t">
+                                    <a href="#"><img src="img/newarrive1.jpg" alt=""></a>
+                                </div>
+                                <div class="info-m">
+                                    <a href="#">真爱永恒-99支红玫瑰</a>
+                                </div>
+                                <div class="info-b">
+                                    <span>￥<b>521.00</b></span>
+                                    <a href="http://localhost/1905/flower/gooddetail.html">点击购买</a>
+                                </div>
+                            </div> -->
+            </div>
+        </div>
         <!-- 尾部 -->
         <div id="footer">
             <div class="footer-t clear">
@@ -54,5 +110,38 @@
 <script src="libs/jquery.js"></script>
 <script src="js/jquery-banner.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/login.js"></script>
+<!-- <script src="js/login.js"></script> -->
+<script src="libs/ajax-3.1.js"></script>
+<script>
+    class Display{
+        constructor(options){
+            this.url = options.url;
+            this.like = options.like;
+            this.init();
+        }
+        init(){
+            var that = this;
+            ajax({
+                url:this.url,
+                success:function(res){
+                    // console.log(res);
+                    that.res = JSON.parse(res);
+                    that.display();
+                }
+            })
+        }
+        display(){
+            var str = "";
+            console.log(this.res)
+            for(var i=0;i<4;i++){
+                str += `<div class="info" goodid="${this.res[i].id}"><div class="info-t"><a href="##"><img src="${this.res[i].src}" alt=""></a></div><div class="info-m"><a href="#">${this.res[i].name}</a></div><div class="info-b"><span>￥<b>${this.res[i].price}</b></span><a href="http://localhost/1905/flower/gooddetail.html" class="buy">点击购买</a></div></div>`;
+            }
+            this.like.innerHTML = str;
+        }
+    }
+    new Display({
+        url:"http://localhost/1905/flower/data/json/data.json",
+        like:document.querySelector(".like-bottom")
+    });
+</script>
 </html>

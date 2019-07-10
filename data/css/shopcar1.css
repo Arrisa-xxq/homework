@@ -1,0 +1,118 @@
+.shopcar1{
+  
+}
+.shopcar1 .shopcar-top{
+    text-align: center;
+    margin: 40px;
+}
+.shopcar1 .status{
+    /* display: flex;
+    justify-content: space-around;
+    flex-direction: row; */
+    height: 70px;
+    font:600 25px/50px "";
+}
+.shopcar1 .status .col{
+    display: inline;
+    margin-left: 40px;
+}
+.shopcar1 .buyform{
+    /* width: 1200px; */
+}
+.shopcar1 .buyform .formtop{
+    width: 100%;
+    height: 46px;
+    border: 1px solid #ccc;
+}
+.shopcar1 .buyform .formtop ul{}
+.shopcar1 .buyform .formtop ul li{
+    float: left;
+    font: 16px/30px "";
+    margin-right: 50px;
+    margin-left: 20px;
+    line-height: 46px;
+}
+.shopcar1 .buyform .formtop ul li:nth-child(1){
+    margin-right: 600px;
+}
+.shopcar1 .buyform .pay{
+    /* height: 100px; */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    
+}
+.shopcar1 .buyform .pay .listinfo{
+    height: 128px;
+}
+.shopcar1 .buyform .pay img{
+    width: 70px;
+    height: 85px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 20px 40px;
+    
+}
+.shopcar1 .buyform .pay a{
+    font: 16px/20px "";
+    display: inline-block;
+    width: 500px;
+}
+.shopcar1 .buyform .pay a:hover{
+    color: red;
+    text-decoration-line: underline;
+}
+.shopcar1 .buyform .pay span{
+    display: inline-block;
+    text-align: center;
+}
+.shopcar1 .buyform .pay .danjia{
+    width: 160px;
+}
+.shopcar1 .buyform .pay input{
+    width: 90px;
+    
+}
+.shopcar1 .buyform .pay .total{
+    width: 130px;
+}
+.shopcar1 .buyform .pay b{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.shopcar1 .gobuy{
+    height: 55px;
+    width: 1200px;
+    background: #fff6f7;
+    border: 1px solid #f4b1b9;
+    margin-top: 20px;
+}
+.shopcar1 .gobuy .goon{
+    color: red;
+    font: 16px/55px "";
+    line-height: 55px;
+    margin-left: 10px; 
+}
+.shopcar1 .gobuy span{
+    font: 14px/20px "";
+
+}
+.shopcar1 .gobuy span s{
+    color: red;
+}
+.shopcar1 .gobuy b{
+   margin-left:700px;
+}
+.shopcar1 .gobuy .payfor{
+    display: inline-block;
+    width: 162px;
+    height: 54px;
+    background:#ca0e25;
+    color: #fff; 
+    float: right;
+    font: 20px/30px "";
+    line-height: 54px;
+    text-align: center;
+}

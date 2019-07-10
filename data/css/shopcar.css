@@ -1,5 +1,13 @@
-
-.goods{
+.shopcar{
+    font:600 20px/40px "";
+    line-height: 100px;
+    text-align: center;
+}
+.shopcar a:hover{
+    color: red;
+    text-decoration-line: underline;
+}
+.like{
     width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -11,22 +19,24 @@
     margin: 20px auto;
  
 }
-
-.goods .info{
+.like .like-top{
+    margin: 20px 0;
+}
+.like .info{
     width: 300px;
     height: 410px;
     border: 1px solid #ccc;
     float: left;
     position: relative;
 }
-.goods .info:hover{
+.like .info:hover{
     border-color: #ca0e25;
 }
-.goods .info-t{
+.like .info-t{
     /* height: 310px; */
     margin: 10px 0;
 }
-.goods .info-m{
+.like .info-m{
     margin-bottom: 3px;
     /* overflow: hidden; */
     height: 24px;
@@ -34,22 +44,22 @@
     font-size: 14px;
     padding: 0 20px;
 }
-.goods .info-m a{
+.like .info-m a{
     color: #666;
 }
-.goods .info-m a:hover{
+.like .info-m a:hover{
     text-decoration-line: underline;
 }
-.goods .info-b{
+.like .info-b{
     font-size: 18px;
     line-height: 30px;
     color: #f00909;
     padding: 0 20px;
 }
-.goods .info-b span,b{
+.like .info-b span,b{
     font:600 20px/30px "";
 }
-.goods .info-b a{
+.like .info-b a{
     display: inline-block;
     width: 80px;
     height: 30px;
@@ -60,41 +70,5 @@
     border-radius: 3px;
     position: absolute;
     left: 200px;
-}
-/* 分页 */
-.pagination{
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-.pagination a {
-    text-decoration: none;
-	border: 1px solid #AAE;
-	color: #15B;
-}
-
-.pagination a, .pagination span {
-    display: inline-block;
-    padding: 0.1em 0.4em;
-    margin-right: 5px;
-	margin-bottom: 5px;
-}
-
-.pagination .current {
-    background: #fff;
-    color: #26B;
-    border: 1px solid #AAE;
-    width: 34px;
-    line-height: 34px;
-    font: 16px/34px "";
-    text-align: center;
-}
-
-.pagination .current.prev, .pagination .next{
-	color:#999;
-	border-color:#999;
-    background:#fff;
-    width: 86px;
-    height: 34px;
+    /* float: right; */
 }
