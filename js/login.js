@@ -102,7 +102,7 @@ btn2.onclick = function(){
     // console.log(check);    
     for(var i=0;i<check.length;i++){  
         if(check[i].phone == t1.value && check[i].password == t2.value){
-            location = "D:/1905/第二阶段项目-心意鲜花/index.html";
+            location = "http://localhost/1905/flower/index.html";
             console.log("成功");
             return;
         }

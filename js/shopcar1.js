@@ -5,6 +5,7 @@ class ShopCar1{
         this.like = options.like;
         this.jianshu = options.jianshu;
         this.heji = options.heji;
+        this.login = options.login;
         this.init();
     }
     init(){
@@ -22,10 +23,18 @@ class ShopCar1{
     getData(){
         // console.log(localStorage.getItem("buyinfo"))
         this.buyinfos = localStorage.getItem("buyinfo") ? JSON.parse(localStorage.getItem("buyinfo")) : [];
-       
+        this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+        this.setData();
         // console.log(this.buyinfos);
         this.display();
         this.addEvent();
+    }
+    setData(){
+        var str = "";
+        for(var i =0;i<this.check.length;i++){
+            str = this.check[i].phone;
+        }
+        this.login.innerHTML = str;
     }
     display(){
         var str = "";
@@ -110,6 +119,13 @@ class ShopCar1{
                 t.parentNode.remove();
                 that.removeData();
             }
+            var total = document.querySelectorAll(".total");
+            var h = 0;
+            for(var i=0;i<total.length;i++){
+                // console.log(parseInt(total[i].innerHTML));
+                h += parseInt(total[i].innerHTML);
+            }
+            that.heji.innerHTML = h;
         }
     }
     removeData(){
@@ -121,6 +137,7 @@ class ShopCar1{
             }
         }
         localStorage.setItem("buyinfo",JSON.stringify(this.buyinfos));
+        // location = "http://localhost/1905/flower/shopcar1.html";
     }
 }
 new ShopCar1({
@@ -128,5 +145,26 @@ new ShopCar1({
     pay:document.querySelector(".pay"),
     like:document.querySelector(".like-bottom"),
     heji:document.querySelector(".gobuy b s"),
-    jianshu:document.querySelector(".gobuy span s")
+    jianshu:document.querySelector(".gobuy span s"),
+    login:document.querySelector(".topul .login a")
 });
+
+
+// class Login{
+//     constructor(){
+//         this.login = document.querySelector(".topul .login a");
+//         this.init();
+//     }
+//     init(){
+//         this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+//         this.setData();
+//     }
+//     setData(){
+//         var str = "";
+//         for(var i =0;i<this.check.length;i++){
+//             str = this.check[i].phone;
+//         }
+//         this.login.innerHTML = str;
+//     }
+// }
+// new Login;

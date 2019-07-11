@@ -1,0 +1,46 @@
+.box {
+  width: 1120px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 20px auto; }
+  .box ul li {
+    box-sizing: border-box;
+    width: 280px;
+    height: 280px;
+    float: left;
+    padding: 3px;
+    position: relative;
+    border: 1px solid #ccc; }
+    .box ul li:hover {
+      border: 1px solid red; }
+    .box ul li img {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 15px; }
+    .box ul li a {
+      display: inline-block;
+      position: absolute;
+      bottom: 10px;
+      font: 16px/20px "";
+      color: #000;
+      left: 10px; }
+      .box ul li a:hover {
+        text-decoration-line: underline; }
+    .box ul li div {
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      text-align: center;
+      width: 80px;
+      height: 30px;
+      border: 1px solid #fd9ea4;
+      border-radius: 4px;
+      font: 14px/30px "";
+      background: #fae5e4;
+      color: #fd9ea4;
+      cursor: pointer; }

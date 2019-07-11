@@ -1,64 +1,64 @@
-// class Mirro{
-//     constructor(){
-//         this.sbox = document.querySelector(".details .imgbox");
-//         this.bbox = document.querySelector(".details .simgbox");
-//         this.bimg = document.querySelector(".details .simgbox img");
-//         this.movesp = document.querySelector(".details .imgbox span");                
-//         // this.init();
-//         this.addEvent();
-//     };
-//     init(){
-//         this.movesp.style.width = this.bbox.offsetWidth / this.bimg.offsetWidth * this.sbox.offsetWidth + "px";
-//         this.movesp.style.height = this.bbox.offsetHeight / this.bimg.offsetHeight * this.sbox.offsetHeight + "px";
-//     };
-//     addEvent(){
-//         var that = this;
-//         this.sbox.addEventListener("mouseover",function(){
-//             that.over();
-//             that.init();
-//         });
-//         this.sbox.addEventListener("mouseout",function(){
-//             that.out();
-//         });
-//         this.sbox.addEventListener("mousemove",function(eve){
-//             var e = eve || window.event;
-//             that.move(e);
-//         });
-//     };
-//     over(){
-//         this.movesp.style.display = "block";
-//         this.bbox.style.display = "block";
-//     };
-//     out(){
+class Mirro{
+    constructor(){
+        this.sbox = document.querySelector(".details .imgbox");
+        this.bbox = document.querySelector(".details .simgbox");
+        this.bimg = document.querySelector(".details .simgbox img");
+        this.movesp = document.querySelector(".details .imgbox span");                
+        // this.init();
+        this.addEvent();
+    };
+    init(){
+        this.movesp.style.width = this.bbox.offsetWidth / this.bimg.offsetWidth * this.sbox.offsetWidth + "px";
+        this.movesp.style.height = this.bbox.offsetHeight / this.bimg.offsetHeight * this.sbox.offsetHeight + "px";
+    };
+    addEvent(){
+        var that = this;
+        this.sbox.addEventListener("mouseover",function(){
+            that.over();
+            that.init();
+        });
+        this.sbox.addEventListener("mouseout",function(){
+            that.out();
+        });
+        this.sbox.addEventListener("mousemove",function(eve){
+            var e = eve || window.event;
+            that.move(e);
+        });
+    };
+    over(){
+        this.movesp.style.display = "block";
+        this.bbox.style.display = "block";
+    };
+    out(){
         
-//         this.movesp.style.display = "none";
-//         this.bbox.style.display = "none";
-//     };
-//     move(e){
-//         var l =  e.clientX - this.sbox.offsetLeft - this.movesp.offsetWidth;
-//         var t =  e.clientY - this.sbox.offsetTop - this.movesp.offsetHeight/2;
+        this.movesp.style.display = "none";
+        this.bbox.style.display = "none";
+    };
+    move(e){
+        var l =  e.clientX - this.sbox.offsetLeft - this.movesp.offsetWidth;
+        var t =  e.clientY - this.sbox.offsetTop - this.movesp.offsetHeight/2;
 
-//         if(l<0){
-//             l = 0;
-//         }else if(l > this.sbox.offsetWidth - this.movesp.offsetWidth){
-//             l = this.sbox.offsetWidth - this.movesp.offsetWidth;
-//         }
-//         if(t<0){
-//             t = 0;
-//         }else if(t > this.sbox.offsetHeight - this.movesp.offsetHeight){
-//             t = this.sbox.offsetHeight - this.movesp.offsetHeight;
-//         }
-//         this.movesp.style.left = l + "px";
-//         this.movesp.style.top = t + "px";
+        if(l<0){
+            l = 0;
+        }else if(l > this.sbox.offsetWidth - this.movesp.offsetWidth){
+            l = this.sbox.offsetWidth - this.movesp.offsetWidth;
+        }
+        if(t<0){
+            t = 0;
+        }else if(t > this.sbox.offsetHeight - this.movesp.offsetHeight){
+            t = this.sbox.offsetHeight - this.movesp.offsetHeight;
+        }
+        this.movesp.style.left = l + "px";
+        this.movesp.style.top = t + "px";
 
-//         var x = l / (this.sbox.offsetWidth - this.movesp.offsetWidth);
-//         var y = t / (this.sbox.offsetHeight - this.movesp.offsetHeight);
-//         this.bimg.style.left = -x * (this.bimg.offsetWidth - this.bbox.offsetWidth) + "px";
-//         this.bimg.style.top = -y * (this.bimg.offsetHeight - this.bbox.offsetHeight) + "px";
-//         // console.log(this.bimg.style.left,this.bimg.style.top);
+        var x = l / (this.sbox.offsetWidth - this.movesp.offsetWidth);
+        var y = t / (this.sbox.offsetHeight - this.movesp.offsetHeight);
+        this.bimg.style.left = -x * (this.bimg.offsetWidth - this.bbox.offsetWidth) + "px";
+        this.bimg.style.top = -y * (this.bimg.offsetHeight - this.bbox.offsetHeight) + "px";
+        // console.log(this.bimg.style.left,this.bimg.style.top);
 
-//         }
-//     }
+        }
+    }
     // onload = function(){
     //     new Mirro();
     // }
@@ -81,7 +81,7 @@ class goodDetail{
                 // console.log(that.res);
                 
                 that.getData();
-                // new Mirro();
+                new Mirro();
             }
         })
     }
@@ -237,3 +237,22 @@ new goodDetail({
     url:"http://localhost/1905/flower/data/json/gooddetail.json",
     top:document.querySelector(".top")
 });
+
+// class Login{
+//     constructor(){
+//         this.login = document.querySelector(".topul .login a");
+//         this.init();
+//     }
+//     init(){
+//         this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+//         this.setData();
+//     }
+//     setData(){
+//         var str = "";
+//         for(var i =0;i<this.check.length;i++){
+//             str = this.check[i].phone;
+//         }
+//         this.login.innerHTML = str;
+//     }
+// }
+// new Login;

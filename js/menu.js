@@ -7,22 +7,22 @@ $(".products .bd .item").hover(function(){
 
 // banner轮播图
 $(".banner1").banner({
-    aimg:$(".banner1").find("img"),		//必传
-    left:$(".banner1").find("#left"),		//可选,传了有功能，不传没有功能
-    right:$(".banner1").find("#right"),		//可选,传了有功能，不传没有功能
-    isList:true,			//可选，默认为true
-    autoPlay:true,			//可选，默认为true
-    moveTime:200,			//可选，默认为200
-    index:0			//必传
+    aimg:$(".banner1").find("img"),		
+    left:$(".banner1").find("#left"),		
+    right:$(".banner1").find("#right"),		
+    isList:true,			
+    autoPlay:true,			
+    moveTime:200,			
+    index:0			
 })
 $(".banner2").banner({
-    aimg:$(".banner2").find("a"),		//必传
-    // left:$(".banner2").find("#left"),		//可选,传了有功能，不传没有功能
-    // right:$(".banner2").find("#right"),		//可选,传了有功能，不传没有功能
-    isList:true,			//可选，默认为true
-    autoPlay:true,			//可选，默认为true
-    moveTime:200,			//可选，默认为200
-    index:0			//必传
+    aimg:$(".banner2").find("a"),		
+    // left:$(".banner2").find("#left"),		
+    // right:$(".banner2").find("#right"),		
+    isList:true,			
+    autoPlay:false,		
+    moveTime:200,			
+    index:0			
 })
 
 //侧边导航
@@ -34,6 +34,8 @@ $(".floor ul").children("li").click(function(){
         scrollTop:t
     })
 })
+
+
 // 登录注册选项卡
 var adiv = document.querySelectorAll(".choice div");
 var acont = document.querySelectorAll("#cont .contall");
@@ -50,3 +52,21 @@ for(var i=0;i<adiv.length;i++){
     }
 }
 
+// class Login{
+//     constructor(){
+//         this.login = document.querySelector(".topul .login a");
+//         this.init();
+//     }
+//     init(){
+//         this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+//         this.setData();
+//     }
+//     setData(){
+//         var str = "";
+//         for(var i =0;i<this.check.length;i++){
+//             str = this.check[i].phone;
+//         }
+//         this.login.innerHTML = str;
+//     }
+// }
+// new Login;

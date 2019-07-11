@@ -5,6 +5,7 @@ class PageChange{
         this.pageList = options.pageList;
         this.num = options.num || 20;
         this.index = options.index || 0;
+        this.login = options.login;
         this.load();
         this.addEvent();
     }
@@ -18,6 +19,15 @@ class PageChange{
                 that.displayNum();
             }
         })
+        this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+        this.setData();
+    }
+    setData(){
+        var str = "";
+        for(var i =0;i<this.check.length;i++){
+            str = this.check[i].phone;
+        }
+        this.login.innerHTML = str;
     }
     displayNum(){
         var that = this;
@@ -62,6 +72,26 @@ new PageChange({
     url:"http://localhost/1905/flower/data/json/data.json",
     goods:$(".goods"),
     pageList:$("#Pagination"),
+    login:document.querySelector(".topul .login a"),
     num:20,
     index:0
 });
+
+// class Login{
+//     constructor(){
+//         this.login = document.querySelector(".topul .login a");
+//         this.init();
+//     }
+//     init(){
+//         this.check = localStorage.getItem("check") ? JSON.parse(localStorage.getItem("check")) : [];
+//         this.setData();
+//     }
+//     setData(){
+//         var str = "";
+//         for(var i =0;i<this.check.length;i++){
+//             str = this.check[i].phone;
+//         }
+//         this.login.innerHTML = str;
+//     }
+// }
+// new Login;
